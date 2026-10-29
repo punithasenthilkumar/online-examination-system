@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+🏛️ N.S.N College Of Engineering And Technology
+</div>
+
+<nav>
+<a href="login.html">Home</a>
+<a href="#">Result</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>ONLINE EXAM RESULT</h1>
+
+<hr><br>
+
+<h2 id="student"></h2>
+
+<h2 id="regno"></h2>
+
+<h2 id="score"></h2>
+
+<h2 id="percentage"></h2>
+
+<h2 id="result"></h2>
+
+<br>
+
+<button onclick="goHome()">
+Back to Home
+</button>
+
+</div>
+
+<script>
+
+document.getElementById("student").innerHTML =
+"Student Name : " + localStorage.getItem("studentName");
+
+document.getElementById("regno").innerHTML =
+"Register Number : " + localStorage.getItem("regno");
+
+document.getElementById("score").innerHTML =
+"Score : " + localStorage.getItem("score");
+
+document.getElementById("percentage").innerHTML =
+"Percentage : " + localStorage.getItem("percentage");
+
+let result = localStorage.getItem("result");
+
+document.getElementById("result").innerHTML =
+"Result : " + result;
+
+if(result=="PASS"){
+
+document.getElementById("result").style.color="green";
+
+}
+else{
+
+document.getElementById("result").style.color="red";
+
+}
+
+function goHome(){
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>
